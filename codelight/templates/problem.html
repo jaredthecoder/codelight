@@ -1,0 +1,15 @@
+<DOCTYPE html>
+<html lang='en-us'>
+    <title>Problem {{ problem_number }} Submission</title>
+    <body>
+        <h1>Problem {{ problem_number }} Submission</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.errors }}
+            {{ form.hidden_tag() }}
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </body>
+</html>
+
