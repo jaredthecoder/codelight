@@ -3,11 +3,17 @@
     <title>Problem {{ problem_number }} Submission</title>
     <body>
         <h1>Problem {{ problem_number }} Submission</h1>
+	{% from "_formhelpers.html" import render_field %}
         <form method="POST" enctype="multipart/form-data">
-            {{ form.errors }}
             {{ form.hidden_tag() }}
+	    <p>
+		{{ render_field(form.first_name) }}
+		{{ render_field(form.middle_initial) }}
+		{{ render_field(form.last_name) }}
+		{{ render_field(form.solution) }}
+	    </p>
             <p>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit Your Solution">
             </p>
         </form>
     </body>
